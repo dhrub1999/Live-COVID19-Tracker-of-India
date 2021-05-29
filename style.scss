@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #adadad;
+  color: white;
+
+  .large-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    .text {
+      width: 90%;
+      margin: 0 auto;
+
+      h1 {
+        margin: 40px 0;
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+
+        span {
+          color: rgb(0, 0, 0);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .grid-container {
+      width: 90%;
+      height: 350px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px 20px;
+      grid-template-areas:
+        ". . ."
+        ". . .";
+
+      .cases {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          font-size: 1rem;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+          font-weight: 500;
+          padding-top: 20px;
+          color: white;
+        }
+      }
+
+      .confirmed,
+      .total-Confirmed {
+        background: black;
+        border-radius: 1rem;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      .recovered,
+      .total-Recovered {
+        background: rgb(0, 128, 0);
+        border-radius: 1rem;
+        box-shadow: 3px 5px 10px rgba(0, 128, 0, 0.9);
+      }
+
+      .deaths,
+      .total-death {
+        background: red;
+        border-radius: 1rem;
+        box-shadow: 3px 5px 10px rgba(255, 0, 0, 0.9);
+      }
+    }
+
+    p{
+      font-size: 12px;
+      opacity: .7;
+
+      span{
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px){
+  body{
+    .large-container{
+      .text{
+        h1{
+          font-size: 2rem;
+        }
+      }
+
+      .grid-container{
+        height: 450px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 20px;
+        grid-template-areas:
+          ". ."
+          ". ."
+          ". .";
+      }
+    }
+  }
+}
